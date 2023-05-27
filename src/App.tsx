@@ -1,7 +1,11 @@
-import Layout from "./layout";
+import Stack from "./components/Stack";
 
 function App() {
-  return <Layout />;
+  return (
+    <>
+      <Stack />
+    </>
+  );
 }
 
 export default App;
