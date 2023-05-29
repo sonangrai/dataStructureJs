@@ -22,12 +22,12 @@ export default class Stack {
   }
 
   push(value: string) {
-    let newNode = new Anode(value);
+    const newNode = new Anode(value);
     if (!this.first) {
       this.first = newNode;
       this.last = newNode;
     } else {
-      let temp = this.first;
+      const temp = this.first;
       this.first = newNode;
       this.first.next = temp;
     }
@@ -36,7 +36,7 @@ export default class Stack {
 
   pop() {
     if (!this.first) return null;
-    let temp = this.first;
+    const temp = this.first;
     // If only one
     if (this.first === this.last) {
       this.last = null;
