@@ -28,7 +28,9 @@ export default function RootLayout({
           <Sidebar />
         </aside>
 
-        <main className="w-5/6">{children}</main>
+        <main className="w-5/6 p-2">
+          <div className="max-w-[768px] mx-auto">{children}</div>
+        </main>
       </body>
     </html>
   );
