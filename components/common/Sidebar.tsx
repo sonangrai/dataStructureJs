@@ -19,7 +19,10 @@ function Sidebar() {
                   key={itm.id}
                   className={`${pathname.includes(itm.link) ? "*:border-l-2" : ""}`}
                 >
-                  <Link href={itm.link} className="text-gray-600 px-2">
+                  <Link
+                    href={`${solution.link}${itm.link}`}
+                    className="text-gray-600 px-2"
+                  >
                     {itm.title}
                   </Link>
                 </li>
