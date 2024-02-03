@@ -1,3 +1,4 @@
+"use client";
 import InputField from "./bubble/component/InputField";
 
 function layout({ children }: { children: React.ReactNode }) {
