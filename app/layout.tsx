@@ -1,4 +1,5 @@
 import Header from "components/common/Header";
+import Sidebar from "components/common/Sidebar";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -20,9 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>
+      <body className="flex flex-wrap">
         <Header />
-        {children}
+
+        <aside className="w-1/6 border-r p-2">
+          <Sidebar />
+        </aside>
+
+        <main className="w-5/6">{children}</main>
       </body>
     </html>
   );
