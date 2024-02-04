@@ -9,7 +9,7 @@ function Process() {
 
   const execute = () => {
     setOutput("");
-    if (input == "") return alert("Please input data");
+    if (input == "") return setError("Please input data");
     setOutput(input);
   };
 
