@@ -2,7 +2,7 @@ import { inputAtom } from "app/sorting/store";
 import { useAtom } from "jotai";
 import { useState } from "react";
 
-function Process() {
+function Process({ logic }: { logic: (i: number[]) => string }) {
   const [input, setInput] = useAtom(inputAtom);
   const [error, setError] = useState<string>("");
   const [output, setOutput] = useState<string>("");
@@ -10,7 +10,8 @@ function Process() {
   const execute = () => {
     setOutput("");
     if (input == "") return setError("Please input data");
-    setOutput(input);
+    const inp = input.split(",").map((el) => Number(el));
+    setOutput(() => logic(inp));
   };
 
   return (
@@ -22,7 +23,7 @@ function Process() {
 
         <p className="text-[14px] text-gray-700">
           {
-            " Input the list of array's to check the output as per the sorting algorithm "
+            " Input the list of array's to check the output as per the sorting algorithm. For eg: 9,4,12,56,7,8,43,1,23 "
           }
         </p>
       </div>
