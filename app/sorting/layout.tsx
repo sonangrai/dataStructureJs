@@ -1,11 +1,12 @@
 "use client";
-import InputField from "./bubble/component/InputField";
+
+import Process from "./component/Process";
 
 function layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="py-10">
       {children}
-      <InputField />
+      <Process />
     </div>
   );
 }
