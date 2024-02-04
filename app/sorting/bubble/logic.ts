@@ -1,7 +1,7 @@
 export const bubbleSortFn = (input: number[]) => {
   for (let i = 0; i < input.length - 1; i++) {
     let flag: boolean = false;
-    for (let j = 0; j < input.length; j++) {
+    for (let j = 0; j < input.length - i; j++) {
       if (input[j] > input[j + 1]) {
         // Swapping
         let temp = input[j + 1];
