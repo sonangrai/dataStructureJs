@@ -1,9 +1,7 @@
-import { inputAtom } from "app/sorting/store";
-import { useAtom } from "jotai";
 import { useState } from "react";
 
 function Process({ logic }: { logic: (i: number[]) => string }) {
-  const [input, setInput] = useAtom(inputAtom);
+  const [input, setInput] = useState("");
   const [error, setError] = useState<string>("");
   const [output, setOutput] = useState<string>("");
 

@@ -1,7 +1,7 @@
 "use client";
 import Article from "components/common/Article";
 import Process from "../component/Process";
-import { bubbleSortFn } from "./logic";
+import bubbleSortFn from "./logic";
 
 function page() {
   return (
