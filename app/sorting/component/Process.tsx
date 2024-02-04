@@ -14,7 +14,19 @@ function Process() {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex p-4 border flex-col gap-4 bg-gray-50">
+      <div>
+        <h4 className="font-medium text-gray-600 text-[18px]">Live Example</h4>
+
+        <hr className="my-2" />
+
+        <p className="text-[14px] text-gray-700">
+          {
+            " Input the list of array's to check the output as per the sorting algorithm "
+          }
+        </p>
+      </div>
+
       <div className="border">
         <input
           className="p-2 w-full"
@@ -34,8 +46,8 @@ function Process() {
       </div>
 
       {output != "" && (
-        <div className="border border-green-600 p-2 text-green-600">
-          {output}
+        <div className="p-2 border text-green-600 text-[16px]">
+          {"Output ->"} {output}
         </div>
       )}
     </div>
