@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className="flex flex-wrap">
         <Header />
 
-        <aside className="w-1/6 border-r p-4">
+        <aside className="w-1/6 border-r p-4 sticky top-[50px]">
           <Sidebar />
         </aside>
 

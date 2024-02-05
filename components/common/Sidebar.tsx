@@ -7,7 +7,7 @@ function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="min-h-[100vh]">
+    <div>
       {solutionMenu.map((solution) => (
         <ul key={solution.id}>
           <li>
