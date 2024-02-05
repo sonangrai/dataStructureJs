@@ -20,6 +20,11 @@ export const solutionMenu: ISolutionMenu[] = [
         title: "Bubble",
         link: "/bubble",
       },
+      {
+        id: 12,
+        title: "Selection",
+        link: "/selection",
+      },
     ],
   },
 ];
