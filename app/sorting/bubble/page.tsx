@@ -18,7 +18,7 @@ export default page;
 
 const document = `
   <p class="text-[16px] font-light"> 
-    Bubble sort if the most common and simplest sorting algorithm. This algorithm compares the <b>adjacent</b> item and switch if needed.
+    Bubble sort is the most common and simplest sorting algorithm. This algorithm compares the <b>adjacent</b> item and switch if needed.
   </p>
   <div class="bg-gray-200 my-4 p-4">
     <h4 class="font-bold">Algorithm</h4>
