@@ -2,6 +2,7 @@
 import Article from "components/common/Article";
 import Process from "../component/Process";
 import bubbleSortFn from "./logic";
+import file from "./logic.ts";
 
 function page() {
   return (
@@ -33,4 +34,7 @@ const document = `
       <li>Continue for another item till all items are checked.</li>
     </ul>
   </div>
+  <pre class="bg-slate-600 p-2 text-white my-4 text-[14px]">
+  ${file}
+  </pre>
 `;
