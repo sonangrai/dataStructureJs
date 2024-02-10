@@ -25,6 +25,11 @@ export const solutionMenu: ISolutionMenu[] = [
         title: "Selection",
         link: "/selection",
       },
+      {
+        id: 13,
+        title: "Insertion",
+        link: "/insertion",
+      },
     ],
   },
 ];
