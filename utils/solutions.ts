@@ -30,6 +30,16 @@ export const solutionMenu: ISolutionMenu[] = [
         title: "Insertion",
         link: "/insertion",
       },
+      {
+        id: 14,
+        title: "Merge",
+        link: "/merge",
+      },
+      {
+        id: 15,
+        title: "Quick",
+        link: "/quick",
+      },
     ],
   },
 ];
