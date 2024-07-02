@@ -12,6 +12,18 @@ export interface ISolutionMenu {
 export const solutionMenu: ISolutionMenu[] = [
   {
     id: 1,
+    title: "Linked List",
+    link: "/linkedlist",
+    item: [
+      {
+        id: 11,
+        title: "Single Linked List",
+        link: "/single",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Sorting",
     link: "/sorting",
     item: [
