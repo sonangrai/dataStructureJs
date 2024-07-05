@@ -17,8 +17,13 @@ export const solutionMenu: ISolutionMenu[] = [
     item: [
       {
         id: 11,
-        title: "Single Linked List",
+        title: "Single",
         link: "/single",
+      },
+      {
+        id: 12,
+        title: "Double",
+        link: "/double",
       },
     ],
   },
