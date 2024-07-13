@@ -29,6 +29,18 @@ export const solutionMenu: ISolutionMenu[] = [
   },
   {
     id: 2,
+    title: "Set",
+    link: "",
+    item: [
+      {
+        id: 21,
+        title: "Set",
+        link: "/set",
+      },
+    ],
+  },
+  {
+    id: 3,
     title: "Sorting",
     link: "/sorting",
     item: [
