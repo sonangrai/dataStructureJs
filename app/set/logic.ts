@@ -43,6 +43,16 @@ export class Set {
     return tempSet;
   }
 
+  intersection(setItem: Set) {
+    let resultSet = new Set();
+    for (let i = 0; i < this.dataStore.length; i++) {
+      if (setItem.find(this.dataStore[i]) != -1) {
+        resultSet.add(this.dataStore[i]);
+      }
+    }
+    return resultSet;
+  }
+
   show() {
     console.log(this.dataStore);
   }
