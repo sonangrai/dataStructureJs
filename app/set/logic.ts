@@ -53,6 +53,16 @@ export class Set {
     return resultSet;
   }
 
+  subset(setItem: Set) {
+    if (this.dataStore.length > setItem.dataStore.length) return false;
+
+    for (let i = 0; i < this.dataStore.length; i++) {
+      if (setItem.find(this.dataStore[i]) == -1) return false;
+    }
+
+    return true;
+  }
+
   show() {
     console.log(this.dataStore);
   }
