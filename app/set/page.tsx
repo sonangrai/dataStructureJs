@@ -1,14 +1,11 @@
 import fetchFrame from "app/api";
-import CodeFrame from "app/sorting/component/code-frame";
+import CodeFrame from "components/common/code-frame";
 import { Set } from "./logic";
 
 async function getCode() {
   const res = await fetchFrame("set");
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
 
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 

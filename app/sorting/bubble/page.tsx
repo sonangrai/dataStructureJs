@@ -1,16 +1,26 @@
-"use client";
+import fetchFrame from "app/api/index.ts";
 import Article from "components/common/Article";
-import Process from "../component/Process";
-import bubbleSortFn from "./logic";
-import file from "./logic.ts";
+import CodeFrame from "components/common/code-frame";
 
-function page() {
+async function getCode() {
+  const res = await fetchFrame("sorting/bubble");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+async function page() {
+  const data = await getCode();
+
   return (
     <>
       <article className="mb-2">
         <Article title="Bubble Sorting" description={document} />
       </article>
-      <Process logic={bubbleSortFn} />
+      <CodeFrame data={data} />
     </>
   );
 }
@@ -34,7 +44,4 @@ const document = `
       <li>Continue for another item till all items are checked.</li>
     </ul>
   </div>
-  <pre class="bg-slate-600 p-2 text-white my-4 text-[14px]">
-  ${file}
-  </pre>
 `;

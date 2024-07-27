@@ -1,6 +1,20 @@
+import fetchFrame from "app/api";
+import CodeFrame from "components/common/code-frame";
 import { LinkedList } from "./logic";
 
-function SingleLinkedList() {
+async function getCode() {
+  const res = await fetchFrame("linkedlist/single");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+async function SingleLinkedList() {
+  const data = await getCode();
+
   let ll = new LinkedList();
   ll.insert("Cat", "Head");
   ll.insert("Dog", "Cat");
@@ -9,7 +23,11 @@ function SingleLinkedList() {
   ll.remove("Dog");
   ll.display();
 
-  return <div>SingleLinkedList</div>;
+  return (
+    <div>
+      <CodeFrame data={data} />
+    </div>
+  );
 }
 
 export default SingleLinkedList;
