@@ -30,6 +30,19 @@ export class Set {
     }
   }
 
+  union(setItem: Set) {
+    let tempSet = new Set();
+    for (let i = 0; i < this.dataStore.length; i++) {
+      tempSet.add(this.dataStore[i]);
+    }
+
+    for (let i = 0; i < setItem.dataStore.length; i++) {
+      tempSet.add(setItem.dataStore[i]);
+    }
+
+    return tempSet;
+  }
+
   show() {
     console.log(this.dataStore);
   }
