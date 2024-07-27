@@ -63,6 +63,15 @@ export class Set {
     return true;
   }
 
+  difference(setItem: Set) {
+    let tempSet = new Set();
+    for (let i = 0; i < this.dataStore.length; i++) {
+      if (setItem.find(this.dataStore[i]) === -1)
+        tempSet.add(this.dataStore[i]);
+    }
+    return tempSet;
+  }
+
   show() {
     console.log(this.dataStore);
   }
