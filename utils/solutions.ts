@@ -71,4 +71,16 @@ export const solutionMenu: ISolutionMenu[] = [
       },
     ],
   },
+  {
+    id: 4,
+    title: "Tree",
+    link: "",
+    item: [
+      {
+        id: 41,
+        title: "Binary Tree",
+        link: "/binary-tree",
+      },
+    ],
+  },
 ];
