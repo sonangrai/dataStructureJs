@@ -23,7 +23,7 @@ async function page() {
   bst.insert(1);
   bst.insert(74);
   bst.insert(89);
-  bst.inOrder();
+  bst.preOrder();
 
   return (
     <div>

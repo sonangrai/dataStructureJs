@@ -55,8 +55,16 @@ export class BinaryTree {
   inOrder(node = this.root) {
     if (node != null) {
       this.inOrder(node.left);
-      console.log(node.data + ",");
+      console.log(node.data);
       this.inOrder(node.right);
+    }
+  }
+
+  preOrder(node = this.root) {
+    if (node != null) {
+      console.log(node.data);
+      this.preOrder(node.left);
+      this.preOrder(node.right);
     }
   }
 }
