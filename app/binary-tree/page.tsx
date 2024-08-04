@@ -17,10 +17,13 @@ async function page() {
 
   const bst = new BinaryTree();
 
+  bst.insert(34);
+  bst.insert(100);
+  bst.insert(67);
   bst.insert(1);
-  bst.insert(13);
+  bst.insert(74);
   bst.insert(89);
-  bst.show();
+  bst.inOrder();
 
   return (
     <div>
