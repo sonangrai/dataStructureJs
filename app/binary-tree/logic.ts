@@ -75,4 +75,20 @@ export class BinaryTree {
       console.log(node.data);
     }
   }
+
+  getMin() {
+    let min = this.root;
+    while (min?.left != null) {
+      min = min.left;
+    }
+    return min;
+  }
+
+  getMax() {
+    let max = this.root;
+    while (max?.right != null) {
+      max = max.right;
+    }
+    return max;
+  }
 }
