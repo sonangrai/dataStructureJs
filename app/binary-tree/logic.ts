@@ -91,4 +91,17 @@ export class BinaryTree {
     }
     return max;
   }
+
+  find(data: number) {
+    let current: NodeItem | null = this.root;
+    while (current?.data != data) {
+      if (current && data < current.data) {
+        current = current.left;
+      } else {
+        current = current?.right as NodeItem;
+      }
+      if (current == null) return null;
+    }
+    return current;
+  }
 }
