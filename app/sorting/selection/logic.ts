@@ -4,18 +4,20 @@
  * @returns : sorted array of numbers
  */
 const selectionSortFn = (input: number[]) => {
+  let min;
   for (let i = 0; i < input.length - 1; i++) {
-    let smallest;
-    for (let j = 0; j < input.length; j++) {
-      if (input[j + 1] < input[j]) {
-        smallest = j + 1;
+    min = i;
+    for (let j = i + 1; j < input.length; j++) {
+      if (input[j] < input[min]) {
+        min = j;
       }
     }
-    if (smallest) {
-      let temp = input[i];
-      input[i] = input[smallest];
-      input[smallest] = temp;
-    }
+    let temp = input[i];
+    input[i] = input[min];
+    input[min] = temp;
+
+    // Swap using destructuring
+    // [input[i], input[min]] = [input[min], input[i]];
   }
 
   return input.join(",");
