@@ -3,7 +3,7 @@ import Article from "components/common/Article";
 import CodeFrame from "components/common/code-frame.tsx";
 
 async function getCode() {
-  const res = await fetchFrame("set");
+  const res = await fetchFrame("sorting/selection");
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
