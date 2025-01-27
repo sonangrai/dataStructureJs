@@ -83,4 +83,16 @@ export const solutionMenu: ISolutionMenu[] = [
       },
     ],
   },
+  {
+    id: 5,
+    title: "Searching",
+    link: "/searching",
+    item: [
+      {
+        id: 51,
+        title: "Linear",
+        link: "/linear",
+      },
+    ],
+  },
 ];
