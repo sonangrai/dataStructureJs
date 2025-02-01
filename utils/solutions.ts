@@ -93,6 +93,11 @@ export const solutionMenu: ISolutionMenu[] = [
         title: "Linear",
         link: "/linear",
       },
+      {
+        id: 52,
+        title: "Binary",
+        link: "/binary",
+      },
     ],
   },
 ];
